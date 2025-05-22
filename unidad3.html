@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contenido</title>
+    <link href="https://learn.ifp.es/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Uni 1</a>
+        <a href="unidad2.html">Uni 2</a>
+        <a href="unidad3.html">Uni 3</a>
+    </nav>
+    <main>
+
+<h3>U3</h3>
+
+<h3>B1 - Accesibilidad</h3>
+
+<p>Garantizar que cualquier persona, independientemente de sus capacidades o contexto, pueda percibir, entender y usar una web.</p>
+
+<h3>Grupos beneficiarios:</h3>
+<ul>
+    <li>Discapacidades permanentes: visuales, auditivas, motoras o cognitivas.</li>
+    <li>Situaciones temporales: brazo roto, pantalla pequeña.</li>
+    <li>Limitaciones contextuales: conexión lenta, entornos ruidosos.</li>
+</ul>
+
+<h3>WCAG (Pautas de accesibilidad)</h3>
+
+<h4>Principios (PERC):</h4>
+<ul>
+    <li><strong>Perceptible:</strong> la información debe ser presentable de múltiples formas como los textos alternativos para las imágenes.</li>
+    <li><strong>Operable:</strong> La interfaz debe ser manejable con teclado o voz, <code>tabindex</code> para navegación.</li>
+    <li><strong>Comprensible:</strong> contenido legible y predecible, lenguaje claro, errores de formulario explicado.</li>
+    <li><strong>Robusto:</strong> compatible con tecnologías asistivas como lectores de pantalla como JAWS.</li>
+</ul>
+
+<h3>Categorías de problemas comunes</h3>
+<ul>
+    <li><strong>Perceptible →</strong> Vídeo sin subtítulo → añadir <code>&lt;track kind='captions'&gt;</code></li>
+    <li><strong>Operable →</strong> Menú desplegable no accesible con teclado → usar <code>aria-expanded</code> y eventos de JavaScript.</li>
+    <li><strong>Comprensible →</strong> Formulario con errores crípticos → mensajes claros como "el email debe contener @"</li>
+</ul>
+
+    
+<h3>B2 - Usabilidad</h3>
+
+<h3>Técnicas de inspección</h3>
+
+<h4>Evaluación heurística (Nielsen)</h4>
+<p>Analizar la web con 10 heurísticos (ej: ¿El sistema da feedback ante acciones?)</p>
+<p><strong>Ejemplo de heurístico violado:</strong> consistencia y estándares - un botón de guardar cambia de lugar en la pantalla.</p>
+<p><strong>Solución:</strong> uniformar la ubicación de elementos clave.</p>
+
+<h4>Los 10 heurísticos de Nielsen:</h4>
+
+
+<ol>
+    <li><strong>Visibilidad del estado del sistema:</strong> El sistema debe mantener informado al usuario mediante retroalimentación apropiada y en tiempo razonable.</li>
+    <li><strong>Concordancia entre el sistema y el mundo real:</strong> Usar palabras, frases y conceptos familiares, siguiendo convenciones del mundo real.</li>
+    <li><strong>Control y libertad del usuario:</strong> Permitir deshacer o rehacer acciones fácilmente para evitar quedarse atascado.</li>
+    <li><strong>Consistencia y estándares:</strong> Mantener uniformidad en los elementos de la interfaz para evitar confusión.</li>
+    <li><strong>Prevención de errores:</strong> Diseñar el sistema para evitar errores antes de que ocurran, con confirmaciones o restricciones.</li>
+    <li><strong>Reconocimiento mejor que recuerdo:</strong> Hacer visibles los objetos, acciones y opciones para reducir la carga de memoria del usuario.</li>
+    <li><strong>Flexibilidad y eficiencia de uso:</strong> Permitir atajos para usuarios expertos sin complicar la experiencia de los nuevos.</li>
+    <li><strong>Diseño estético y minimalista:</strong> Mostrar solo la información relevante, evitando el desorden visual.</li>
+    <li><strong>Ayudar a reconocer, diagnosticar y recuperarse de errores:</strong> Mostrar mensajes de error claros, indicando el problema y cómo resolverlo.</li>
+    <li><strong>Ayuda y documentación:</strong> Proporcionar información accesible para ayudar al usuario cuando sea necesario.</li>
+</ol>
+
+
+
+<h4>Recorrido cognitivo</h4>
+<p>Simular cómo un usuario novato completaría tareas.</p>
+
+<h3>Test de usabilidad</h3>
+<p>Son pruebas con usuarios reales para medir cómo de fácil es usar el producto.</p>
+
+<h3>Métricas clave:</h3>
+
+<h4>Cuantitativas:</h4>
+<p>Miden aspectos numéricos y objetivos del comportamiento del usuario.</p>
+<table border="1">
+<thead>
+<tr><th>Métrica</th><th>¿Qué mide?</th><th>Ejemplo</th></tr>
+</thead>
+<tbody>
+<tr><td>Tasa de éxito</td><td>% de usuarios que completan una tarea correctamente.</td><td>El 70% logró comprar un producto en menos de 3 minutos.</td></tr>
+<tr><td>Tiempo en tarea</td><td>Cuánto tarda un usuario en completar una acción.</td><td>En promedio, los usuarios tardaron 1.5 minutos en encontrar el botón de contacto.</td></tr>
+<tr><td>Número de errores</td><td>Veces que el usuario comete un fallo antes de lograr el objetivo.</td><td>3 de 10 usuarios hicieron clic en el logo esperando volver al inicio (error común).</td></tr>
+<tr><td>Ley de los 3 clics</td><td>Si el usuario alcanza su objetivo en ≤3 clics.</td><td>El 90% encontró la política de privacidad en 2 clics.</td></tr>
+</tbody>
+</table>
+
+<h4>Cualitativas:</h4>
+<p>Mide la percepción, opinión y experiencia emocional del usuario.</p>
+<table border="1">
+<thead>
+<tr><th>Métrica</th><th>¿Qué mide?</th><th>Ejemplo</th></tr>
+</thead>
+<tbody>
+<tr><td>Satisfacción</td><td>Escala de 1 a 5 sobre lo "agradable" de la experiencia.</td><td>El 80% calificó la navegación con 4 o 5 estrellas.</td></tr>
+<tr><td>Dificultad percibida</td><td>Comentarios sobre lo complejo de una tarea.</td><td>Usuarios describieron el formulario de registro como 'confuso'.</td></tr>
+<tr><td>Expectativas vs Realidad</td><td>Si la experiencia coincidió con lo que esperaban.</td><td>El 60% esperaba que el botón 'Guardar' estuviera en la parte superior.</td></tr>
+<tr><td>Feedback verbal</td><td>Frases espontáneas durante el test.</td><td>Un usuario dijo: "No entiendo qué hace este botón".</td></tr>
+</tbody>
+</table>
+
+<h3>¿Cómo se usan estas métricas en un informe?</h3>
+<ul>
+    <li><strong>Identificar patrones:</strong> El 70% de los usuarios no encontró el filtro de búsqueda (cuantitativo) porque estaba 'escondido' (cualitativo).</li>
+    <li><strong>Priorizar cambios:</strong> Si una tarea tiene baja tasa de éxito + comentarios negativos, es urgente corregirla.</li>
+    <li><strong>Comparar versiones:</strong> Tras rediseñar el checkout, el tiempo medio de compra bajó de 4 a 2 minutos.</li>
+</ul>
+
+</main>
+</body>
+</html>

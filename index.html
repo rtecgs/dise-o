@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contenido</title>
+    <link href="https://learn.ifp.es/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Uni 1</a>
+        <a href="unidad2.html">Uni 2</a>
+        <a href="unidad3.html">Uni 3</a>
+    </nav>
+    <main>
+
+<h3>B 1 - Contexto y fundamentos</h3>
+
+<h3>T 1, 2 y 3 - Definición de interfaces, elementos, resoluciones y unidades</h3>
+
+<h3>1 - DEFINICIÓN DE INTERFACES Y UX</h3>
+<p><strong>INTERFACES WEB:</strong><br>
+Son sistemas gráficos que permiten la interacción humano-máquina mediante tecnologías web (HTML, CSS y JavaScript).<br>
+Un formulario de login es una interfaz que recibe datos del usuario.</p>
+
+<p><strong>UX (Experiencia de Usuario):</strong><br>
+No solo es el diseño visual, sino todo el proceso de interacción del usuario con el producto.</p>
+<ul>
+    <li>Usabilidad: que sea fácil de usar.</li>
+    <li>Accesibilidad: que funcione para todos.</li>
+    <li>Emociones: que la experiencia sea satisfactoria.</li>
+</ul>
+
+<h3>2 - ELEMENTOS DE LAS INTERFACES</h3>
+<p><strong>INTERACTIVOS:</strong></p>
+<ul>
+    <li>Entrada de datos: campos de texto (&lt;input&gt;), checkboxes (input type='checkbox')</li>
+    <li>Navegación: menús (&lt;nav&gt;), enlaces (&lt;a href=' '&gt;)</li>
+    <li>Contenedores: acordeones, pestañas (se usan &lt;div&gt; + JavaScript)</li>
+</ul>
+<p><strong>GRÁFICOS:</strong></p>
+<ul>
+    <li>Color: Psicología.</li>
+    <li>Tipografía: Legibilidad.</li>
+</ul>
+
+<h3>3 - RESOLUCIONES Y UNIDADES</h3>
+<p><strong>RESOLUCIONES:</strong></p>
+<ul>
+    <li>Móvil vs Escritorio: En móviles, el CSS Pixel Ratio hace que un píxel lógico no equivalga a uno físico.</li>
+    <li>Breakpoints: Puntos donde el diseño se adapta (<code>@media (max-width: 768px)</code> para tablets).</li>
+</ul>
+
+<p><strong>UNIDADES:</strong></p>
+<ul>
+    <li>Absolutas: px (fijos).</li>
+    <li>Relativas:
+        <ul>
+            <li>%: relativo al contenedor padre.</li>
+            <li>rem: relativo al tamaño de fuente del html.</li>
+            <li>vh/vw: relativo al tamaño de la pantalla.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>B2 - Guías de estilo y prototipado</h3>
+
+<h3>4 - PROTOTIPADO</h3>
+<p>Un prototipo es un modelo interactivo o estático que simula cómo funcionará una interfaz web o app antes de desarrollarla. No es el producto final, sino una representación que ayuda a validar ideas.</p>
+
+<p><strong>Objetivos principales:</strong></p>
+<ul>
+    <li>Validar la usabilidad.</li>
+    <li>Testear flujos.</li>
+    <li>Comunicar ideas (al equipo y clientes).</li>
+    <li>Ahorrar costes: corregir errores en esta fase es más barato que después de programar.</li>
+</ul>
+
+<p><strong>Fases del proceso de diseño:</strong></p>
+<ul>
+    <li>Investigación inicial → Wireframes (baja fidelidad).</li>
+    <li>Diseño visual → Mockups (alta fidelidad).</li>
+    <li>Validación → Prototipo interactivo (figma/Adobe XD).</li>
+    <li>Desarrollo → Se programa basándose en el prototipo aprobado.</li>
+</ul>
+
+<p><strong>Ventajas:</strong></p>
+<ul>
+    <li>Ahorrar tiempo y dinero.</li>
+    <li>Mejora la usabilidad con feedback real.</li>
+    <li>Facilita la colaboración en equipo.</li>
+</ul>
+
+<p><strong>Desventajas:</strong></p>
+<ul>
+    <li>Puede generar falsas expectativas si no se explica que es un modelo no funcional.</li>
+    <li>Herramientas complejas que requieren aprendizaje.</li>
+    <li>Un prototipo muy detallado puede demorar el proceso.</li>
+</ul>
+
+<p><strong>Partes de un prototipo:</strong></p>
+<ul>
+    <li>Sitemap: mapa jerárquico de las páginas.</li>
+    <li>Wireframe: esquema sin diseño visual.</li>
+    <li>Mockup (High Fidelity): diseño visual con colores, tipografías e imágenes.</li>
+    <li>Prototipo interactivo: simula la navegación clickeable.</li>
+</ul>
+
+<h3>B3 - Implementación técnica</h3>
+
+<h3>5 - Estructura del proyecto</h3>
+<pre><code>
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;home&lt;/title&gt;
+  &lt;link rel="stylesheet" href="CSS/Style.css"&gt;
+  &lt;script src="JS/Scripts.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<ul>
+    <li>&lt;meta charset="UTF-8"&gt;: Define la codificación de caracteres.</li>
+    <li>&lt;meta name="viewport"&gt;: Asegura que la web se adapte a dispositivos móviles (responsive design).</li>
+</ul>
+
+<h3>6 - Estructura básica y navegación</h3>
+<pre><code>
+&lt;header id="encabezado"&gt;
+  &lt;nav id="navbar"&gt;
+    &lt;ul id="menu"&gt;
+      &lt;li class="elementoMenu"&gt;&lt;a href="#novedades"&gt;Novedades&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;a href="#novedades" onClick="marcarPestana('collares', 'tabCollares')"&gt;Collares&lt;/a&gt;
+</code></pre>
+<ul>
+    <li>&lt;header&gt;: Contenido introductorio.</li>
+    <li>&lt;nav&gt;: Define la barra de navegación.</li>
+    <li>&lt;ul&gt;: Lista no ordenada, estructura estándar para menús.</li>
+    <li>href="#novedades": Enlace interno a una sección con id="novedades".</li>
+    <li>onClick: Evento JavaScript para cambiar pestañas dinámicamente.</li>
+</ul>
+
+<h3>7 - Aplicación de estilos CSS</h3>
+<pre><code>
+.elementoMenu > a {
+  color: #FFFFDD;
+  transition: color 0.5s;
+}
+.elementoMenu > a:hover {
+  color: #87CFFF;
+}
+</code></pre>
+<ul>
+    <li>Selector >: Aplica solo a hijos directos (&lt;a&gt; dentro de .elementoMenu).</li>
+    <li>Transition: Suaviza el cambio de color al hacer hover.</li>
+</ul>
+
+<h3>8 - Maquetación, columnas y menús</h3>
+<pre><code>
+#tituloEncabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submenu {
+  display: none;
+  position: absolute;
+}
+.elementoMenu:hover #submenu {
+  display: block;
+}
+</code></pre>
+<ul>
+    <li>display: flex → crea un contenedor flexible.</li>
+    <li>justify-content y align-items: centran el contenido horizontal y verticalmente.</li>
+    <li>display: none → oculta el submenu inicialmente.</li>
+    <li>position: absolute → posiciona el submenú respecto al elemento padre.</li>
+</ul>
+
+<h3>9 - Estilos de texto</h3>
+<pre><code>
+&lt;link href="https://fonts.googleapis.com/css2?family=Raleway&amp;display=swap" rel="stylesheet"&gt;
+
+.tituloSeccion {
+  font-family: "Raleway", sans-serif;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+</code></pre>
+<ul>
+    <li>Google Fonts: importa la tipografía de Raleway.</li>
+    <li>text-shadow: añade sombra al texto para mejorar la legibilidad.</li>
+</ul>
+
+    </main>
+</body>
+</html>

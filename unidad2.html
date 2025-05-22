@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contenido</title>
+    <link href="https://learn.ifp.es/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Uni 1</a>
+        <a href="unidad2.html">Uni 2</a>
+        <a href="unidad3.html">Uni 3</a>
+    </nav>
+    <main>
+
+<h3>U2</h3>
+
+<h3>B1 - Tipos de imágenes</h3>
+
+<h3>Imágenes Bitmap (rasterizadas)</h3>
+<p>Son imágenes formadas por píxeles, tienen resolución fija, si las escalas mucho pierden calidad.</p>
+
+<h4>Características clave</h4>
+<ul>
+    <li><strong>Resolución:</strong>
+        <ul>
+            <li>Medida en píxeles.</li>
+            <li>Regla de oro: usar siempre la resolución más cercana al tamaño final en la web para evitar pixelado.</li>
+        </ul>
+    </li>
+    <li><strong>Aspect Ratio (relación aspecto):</strong>
+        <ul>
+            <li>Proporción entre ancho y alto (16:9).</li>
+            <li>Importante: mantenerla para no deformar la imagen.</li>
+        </ul>
+    </li>
+    <li><strong>Formatos comunes:</strong>
+        <ul>
+            <li>JPEG: Ideal para fotos.</li>
+            <li>PNG: Para gráficos con transparencia.</li>
+            <li>GIF: Animaciones simples (limitado a 256 colores).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Imágenes vectoriales</h3>
+<p>Son imágenes basadas en fórmulas matemáticas, no pierden calidad al escalarlas.</p>
+
+<h4>Características clave</h4>
+<ul>
+    <li><strong>Formato principal:</strong> SVG.</li>
+    <li><strong>Ventajas:</strong>
+        <ul>
+            <li>Peso ligero.</li>
+            <li>Escalables infinitamente.</li>
+        </ul>
+    </li>
+    <li><strong>Desventajas:</strong> No apto para fotos realistas.</li>
+</ul>
+
+<h3>T1 - Imágenes y vídeos</h3>
+<pre><code>&lt;img src="Media/novedad01.jpg" alt="Collar de estrella" class="imgNov"&gt;</code></pre>
+<p><strong>alt:</strong> texto alternativo para accesibilidad y SEO.</p>
+<p><strong>Clase imgNov:</strong> estilos css</p>
+
+<h3>T2 - hover y animaciones</h3>
+<pre><code>
+@keyframes fadein {
+  0% { opacity: 0; top: 375px; }
+  100% { opacity: 1; top: 300px; }
+}
+#tituloEncabezado {
+  animation: fadein 4s;
+}
+</code></pre>
+<ul>
+    <li>@keyframes: define una animación que cambia opacity y top.</li>
+    <li>animation: aplica la animación al título.</li>
+</ul>
+
+<h3>B2 - ELEMENTOS INTERACTIVOS</h3>
+
+<h3>T3 - introducción a JavaScript</h3>
+<pre><code>
+document.getElementById("botonEnviar").addEventListener("click", modalSuscripcion);
+</code></pre>
+<ul>
+    <li>getElementById: selecciona un elemento por ID.</li>
+    <li>addEventListener: ejecuta la función modalSuscripcion al hacer clic.</li>
+</ul>
+
+<h3>T4 - modales</h3>
+<pre><code>
+function modalSuscripcion(event) {
+  event.preventDefault();
+  document.getElementById("modalSuscripcion").style.display = "block";
+}
+</code></pre>
+<ul>
+    <li>preventDefault(): evita el envío del formulario.</li>
+    <li>style.display: cambia la visibilidad del modal.</li>
+</ul>
+
+<h3>T5 - Menú Scroll</h3>
+<pre><code>
+window.onscroll = function() {
+  if (window.scrollY > 200) {
+    document.getElementById("navbar").style.top = "-170px";
+  } else {
+    document.getElementById("navbar").style.top = "0";
+  }
+};
+</code></pre>
+<ul>
+    <li>window.scrollY: detecta la posición del scroll.</li>
+    <li>style.top: mueve el menú fuera de la pantalla al bajar.</li>
+</ul>
+
+<h3>T6 - Lightbox</h3>
+<pre><code>
+function nextImgNov() {
+  numeroIMG++;
+  document.getElementById("imageToShow").innerHTML = `&lt;img src="${listaRutaImgNov[numeroIMG]}"&gt;`;
+}
+</code></pre>
+<ul>
+    <li>innerHTML: Actualiza el contenido del lightbox.</li>
+    <li>Array listaRutaImgNov: almacena rutas de las imágenes.</li>
+</ul>
+
+<h3>T7 - Pestañas</h3>
+<pre><code>
+function marcarPestana(contenedorAMostrar, tabClicada) {
+  document.getElementById(contenedorAMostrar).style.display = "block";
+  document.getElementById(tabClicada).classList.add("pestanaActiva");
+}
+</code></pre>
+<ul>
+    <li>style.display: muestra el contendor seleccionado.</li>
+    <li>classList.add: añade clase CSS para resaltar la pestaña interactiva.</li>
+</ul>
+
+<h3>T8 - Carrusel automático</h3>
+<pre><code>
+setInterval(slideshowAnim, 3000);
+function slideshowAnim() {
+  counterNext++;
+  listaImBgAnim[counterNext].classList.add("nextSlide");
+}
+</code></pre>
+<ul>
+    <li>setInterval: Ejecuta la función cada 3 segundos.</li>
+    <li>classList: manipula clases css para animaciones.</li>
+</ul>
+
+<h3>T9 - Animación por Scroll</h3>
+<pre><code>
+&lt;div data-aos="fade-up" data-aos-duration="1000"&gt;Contenido&lt;/div&gt;
+&lt;script&gt;AOS.init();&lt;/script&gt;
+</code></pre>
+<ul>
+    <li>data-aos: define el tipo de animación (fade-up).</li>
+    <li>AOS.init(): Inicializa la librería Animate On Scroll.</li>
+</ul>
+
+    </main>
+</body>
+</html>
